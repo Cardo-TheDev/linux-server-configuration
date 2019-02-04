@@ -37,8 +37,8 @@ grader ALL=(ALL) NOPASSWD:ALL_ to add _grader_ to list of _sudoers_.
  
 - Secure server by only allowing key based authentication 
  
-Download the default _SSH key pair_ that accompanies the ubuntu instance from Amazon Lightsail account. While logged in as _grader_, copy the contents of _/home/ubuntu/.ssh/authorized_keys. Create a directory, `mkdir .ssh`. Then, `nano .ssh/authorized_keys` and paste the copied content. User _grader_ is now able to log in with key: ssh -i name-of-key.pem grader@_public_ip_address -p 2200. Set file permissions for _.ssh/_ and _authorized_keys_ that prevents other users/groups from gaining access: 'chmod 700 .ssh' and 'chmod 644 .ssh/authorized_keys'. Finally, disable password login by editing _/etc/ssh/sshd_config_. Change the 'yes' line on 'PasswordAuthentication' to 'no'.
- 
+Download the default _SSH key pair_ that accompanies the ubuntu instance from Amazon Lightsail account. While logged in as _grader_, copy the contents of _/home/ubuntu/.ssh/authorized_keys. Create a directory, `mkdir .ssh`. Then, `nano .ssh/authorized_keys` and paste the copied content. User _grader_ is now able to log in with key: ssh -i name-of-key.pem grader@_public_ip_address -p 2200. Set file permissions for _.ssh/_ and _authorized_keys_ that prevents other users/groups from gaining access: 'chmod 700 .ssh' and 'chmod 644 .ssh/authorized_keys'. Finally, disable password login by editing _/etc/ssh/sshd_config_. Change the 'yes' line on 'PasswordAuthentication' to 'no'. Also, change 'prohibit password' adjacent to 'PermitRootLogin' to 'no'. This will prevent any attempt to login as _root_.
+
 - Configure local timezon to UTC
  
 `sudo dpkg-reconfigure tzdata`
