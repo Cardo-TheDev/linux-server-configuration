@@ -24,6 +24,9 @@ Follow the instructions provided to SSH into your server. Download the default k
  
 #### Check for updates and upgrade package source list
 `sudo apt-get update` `sudo apt-get upgrade`
+
+### Automate process updates with _unattended-upgrades_.
+`sudo apt-get install unattended-upgrades` `sudo dpkg-reconfigure unattended-upgrades`to apply updates on a frequent basis.
  
 #### Create user **_grader_** and give sudo access
 `sudo adduser grader` to create a new user named _grader_. `sudo nano /etc/sudoers.d/grader` and input the text: #CLOUD\_IMG: This file was created/modified by the Cloud Image build process\
