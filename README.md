@@ -3,7 +3,7 @@
 ## About
 Taking a baseline installation of a Linux server, on
 [Amazon Lightsail](https://lightsail.aws.amazon.com/), and preparing it to host
-a Python _Flask_ web applications. Making sure to install updates, secure the
+a Python _Flask_ web application. Making sure to install updates, secure the
 server from a number of attack vectors, configure the uncomplicated firewall
 (ufw), install and configure a database server (postgresql), and deploy the
 web applications onto it.
