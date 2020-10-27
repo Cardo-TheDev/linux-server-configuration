@@ -8,7 +8,7 @@ server from a number of attack vectors, configure the uncomplicated firewall
 (ufw), install and configure a database server (postgresql), and deploy the
 web applications onto it.
 
-Please do note that the url is no longer operational. This was only a _trial_
+URL is no longer operational. This was only a _trial_
 project!
 
 - IP Address: 54.93.243.84
